@@ -1,4 +1,13 @@
 Demo::Application.routes.draw do
+
+  get "welcome" => "welcome#index"
+  get "welcome/say_hello" => "welcome#say"
+  get "welcome/hi" => "welcome#hi"
+  # get "events" => "events#index"
+  root :to => "items#index"
+ 
+  devise_for :consumers, :controllers => { :omniauth_callbacks => "/consumers/omniauth_callbacks" }
+
   resources :items
 
 
@@ -57,11 +66,6 @@ Demo::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
-  get "welcome" => "welcome#index"
-  get "welcome/say_hello" => "welcome#say"
-  get "welcome/hi" => "welcome#hi"
-  # get "events" => "events#index"
-  root :to => "welcome#say"
+  match ':controller(/:action(/:id))(.:format)'
 
 end

@@ -7,11 +7,7 @@ When I logged in
 And chose “I want to buy something”
 Then I should see the searching bar function
 Scenario: Try to find some product by searching them
-(Happy path)
 When I go to the Super Girls Closet website
 Then I type some keyword at the searching bar
 And I will see the product list of the related to the keyword
-(Sad path)
-When I go to the Super Girls Closet website
-Then I type some keyword at the searching bar
-And I will see “no item was found”
+

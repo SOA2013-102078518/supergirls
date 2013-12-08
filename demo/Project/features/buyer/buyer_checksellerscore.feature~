@@ -6,13 +6,7 @@ Given I am on the product page
 Then I will see “seller’s evaluation score”
 Scenario: Try to check the seller’s evaluation score history
 When browsing the product web page
-(Happy path)
-When browsing the product web page
 And I am interesting in the seller’s trading evaluation score history
 Then I click “seller’s evaluation score” on the product web page
-And I can check the seller’s trading evaluation score history list  
-(Sad path)
-When browsing the product web page
-And I am interesting in the seller’s trading evaluation score history
-Then I click “seller’s evaluation score” on the product web page
-And I can check the seller’s trading evaluation score history list web page and see “no evaluation score was found” 
+And I can check the seller’s trading evaluation score history list
+

@@ -20,8 +20,7 @@ When I confirm the change
 Then I should be on the new item page
 And I should see the product information that I upload
 
-Scenario: Add new product with wrong information
-(sad path) 
+Scenario: Add new product with wrong information(sad path) 
 Given I am on the User management page
 When I press “add new product”
 Then I should be on the Upload new item page

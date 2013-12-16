@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131204022745) do
+ActiveRecord::Schema.define(:version => 20131216123842) do
 
   create_table "consumers", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -40,8 +40,12 @@ ActiveRecord::Schema.define(:version => 20131204022745) do
     t.string   "image"
     t.text     "description"
     t.text     "discussion"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.string   "pic_file_name"
+    t.string   "pic_content_type"
+    t.integer  "pic_file_size"
+    t.datetime "pic_updated_at"
   end
 
   create_table "items", :force => true do |t|

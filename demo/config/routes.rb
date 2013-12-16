@@ -1,14 +1,14 @@
 Demo::Application.routes.draw do
 
-  get "welcome" => "welcome#index"
-  get "welcome/say_hello" => "welcome#say"
-  get "welcome/hi" => "welcome#hi"
-  # get "events" => "events#index"
-  root :to => "items#index"
+  
+  
+  
+  root :to => "events#index"
+  
  
   devise_for :consumers, :controllers => { :omniauth_callbacks => "consumers/omniauth_callbacks" }
 
-  resources :items
+  resources :events
 
 
   # The priority is based upon order of creation:

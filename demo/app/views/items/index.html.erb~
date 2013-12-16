@@ -1,14 +1,10 @@
-<html>
-<body bgcolor="#E6E6FA">
-<h1>Listing items</h1>
+
+<h1>Welcome to Supergirls' closet</h1>
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Price</th>
-    <th>Image</th>
-    <th>Description</th>
-    <th>Discussion</th>
+    
+    
     <th></th>
     <th></th>
     <th></th>
@@ -30,6 +26,11 @@
 
 <br />
 
-<%= link_to 'New Item', new_item_path %>
+<<<<<<< HEAD
+
 </body>
-</html>
+=======
+<%= link_to 'New Item', new_item_path %>
+
+
+

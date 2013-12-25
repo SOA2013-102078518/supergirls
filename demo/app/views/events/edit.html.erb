@@ -5,12 +5,13 @@
     <%= f.label :price, "Price" %>
     <%= f.text_field :price %>
     <br>
-    <%= f.label :image, "Image" %>
-    <%= f.text_field :image %>
+    <b> Picture </b><br/>
+    <%= f.file_field :pic, size: "10x10" %>
     <br>
     <%= f.label :description, "Description" %>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, size: "45x10" %>
     <br>
     <%= f.submit "Update" %>
     <%= f.submit "Giveup" %>
 <% end %>
+

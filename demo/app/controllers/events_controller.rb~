@@ -1,6 +1,9 @@
 class EventsController < ApplicationController
+
+
   def index
     @events = Event.all
+    
   end
   def new
     @event = Event.new
@@ -13,6 +16,7 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     @page_title = @event.name
+    
   end
   def edit
     @event = Event.find(params[:id])
@@ -27,9 +31,9 @@ class EventsController < ApplicationController
   @event = Event.find(params[:id])
   @event.destroy
 
-  redirect_to :action => :index
+  redirect_to :action => :event
   end
   
-  before_filter :authenticate_consumer
+  before_filter :authenticate_consumer!
 
 end

@@ -3,4 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-
+html, body
+{
+font-size:75%;
+font-family:"lucida calligraphy",arial,'sans serif'; 
+background-color: lightskyblue ;
+}

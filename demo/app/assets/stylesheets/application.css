@@ -6,11 +6,26 @@
  * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
  *
  * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
+ * compiled file but it's generally better to create a new file per style scope.
  *
  *= require_self
  *= require_tree .
  */
+<<<<<<< HEAD
 table { border-collapse:collapse; width:100%; }
 
 th {background-color:purple; color: white ; height:60px; border: 1px solid black; font-size:120%} td {background-color: wheat ; border: 1px solid black; padding:15px}
+=======
+
+
+table
+{
+border-collapse:collapse; width:100%;
+}
+
+
+th {background-color:purple; color: white ; height:60px; border: 1px solid black; font-size:120%}
+td {background-color: wheat ; border: 1px solid black; padding:15px}
+
+
+>>>>>>> 6e4396b656ff162f1c3d31fc7bb378e544158811

@@ -12,3 +12,17 @@
  *= require_tree .
  */
 
+<<<<<<< HEAD
+=======
+
+table
+{
+border-collapse:collapse; width:100%;
+}
+
+
+th {background-color:purple; color: white ; height:60px; border: 1px solid black; font-size:120%}
+td {background-color: wheat ; border: 1px solid black; padding:15px}
+
+
+>>>>>>> 6e4396b656ff162f1c3d31fc7bb378e544158811

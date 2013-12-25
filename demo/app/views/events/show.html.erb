@@ -1,4 +1,29 @@
-<%= @event.name %>
+
 <%= simple_format(@event.description) %>
 
-<p><%= link_to 'Back to index', :controller => 'events', :action => 'index' %></p>
+<p>
+  <b>Name:</b>
+  <%= @event.name %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @event.price %>
+</p>
+
+<p>
+  <%= image_tag @event.pic.url(:medium) %>
+  <br/>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @event.description %>
+</p>
+
+<p>
+  <b>Discussion:</b>
+  <%= @event.discussion %>
+</p>
+
+<p><%= link_to 'back to index', :controller => 'events', :action => '' %></p>

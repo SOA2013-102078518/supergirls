@@ -2,12 +2,13 @@
 <html>
 <head>
   <title><%= @page_title || "Super Girls Closet" %></title>
+  <title><%= @page_title || "Super Girls Closet!" %></title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <h1 align=center><font face="Arimo"><font color="#FF6A6A"><font size="5">Super Girls Closet</font></font></font></h1>
-<body style="background: #FFEFD5;">
+<body>
 <h2 align=right style="color: #FF6A6A">
   <% if current_consumer %>
     <%= link_to('log out', destroy_consumer_session_path, :method => :delete) %> |

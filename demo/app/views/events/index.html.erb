@@ -1,18 +1,20 @@
-<ul>
+
 <br>
 <p>product list<p>
 
+<ul>
+
 <% @events.each do |event| %>
-  <li>
+<div id="products">
   <%= event.name %>
+  <br>
+  <%= link_to( image_tag(event.pic.url(:medium)), :action => 'show', :id => "#{event.id}")%></br>
+<br>
   <%= link_to 'Show', event_path(event.id), :method=>:put %>
   <%= link_to 'Edit', :controller => 'events', :action => 'edit', :id => event %>
   <%= link_to 'Delete', event_path(event.id), :method=> :delete %>
-  <br>
-  <%= link_to( image_tag(event.pic.url(:medium)), :action => 'show', :id => "#{event.id}")%></br>
-  </li>
+</div>
 <% end %>
 </ul>
+
 <%= link_to 'Add new item', :controller => 'events', :action => 'new' %>
-
-

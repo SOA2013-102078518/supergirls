@@ -35,7 +35,10 @@ class EventsController < ApplicationController
   @event.destroy
   redirect_to :action => :index
   end
- 
+  
+  def search
+  @events = event.paginate :page => params[:page],  :conditions => ['txt like ?', "%#{params[:search]}%"]
+  end
   #def hi
   
   #end

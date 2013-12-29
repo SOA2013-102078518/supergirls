@@ -81,6 +81,7 @@ a:hover
 	width: 1200px;
 }
 
+
 /*********************************************************************************/
 /* Image Style                                                                   */
 /*********************************************************************************/
@@ -252,7 +253,6 @@ ul.style3 .icon
 {
 	color: #DB3256;
 }
-
 /*********************************************************************************/
 /* Social Icon Styles                                                            */
 /*********************************************************************************/
@@ -389,7 +389,7 @@ ul.contact li a.icon-rss:before
 	{
 		overflow: hidden;
 		padding: 5em 0em 0em 0em;
-		background: #ffd700 url(images/overlay.png) repeat;
+		background: yellow url(images/overlay.png) repeat;
 	}
 
 	#header
@@ -1414,4 +1414,11 @@ ul.contact li a.icon-rss:before
 		.icon-cloud-upload:before		  { content: "\f0ee"; }
 		.icon-cloud-download:before		  { content: "\f0ed"; }
 
->>>>>>> 6e4396b656ff162f1c3d31fc7bb378e544158811
+#products{ 
+	width: 300px; 
+	display: inline-block; 
+	vertical-align: top; 
+	*display: inline; 
+	*zoom: 1; 
+	height : 400px 
+}

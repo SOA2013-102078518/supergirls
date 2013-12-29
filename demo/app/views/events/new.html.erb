@@ -1,18 +1,22 @@
 <%= form_for @event, :url => { :controller => 'events', :action => 'create' } do |f| %>
-<h1>New item</h1>
+<br>
 
 
 
 
     <%= f.label :name, "Name" %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, size: "25x10" %>
+    <br>
+    Category: 
+    <br>
+    <%= f.select :cate, [['clothes','1'],['cosmetics','2'],['small items','3']] %>
     <br>
     <%= f.label :price, "Price" %>
-    <%= f.text_field :price %>
+    <%= f.text_field :price, size: "25x10" %>
     <br>
-    <p>
-      <b> Picture </b><br/>
-      <%= f.file_field :pic %>
+    
+    <b> Picture </b><br/>
+    <%= f.file_field :pic, size: "10x10" %>
     </p>
     <%= f.label :description, "Description" %>
     <%= f.text_area :description %>

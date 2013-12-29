@@ -4,7 +4,7 @@ Demo::Application.routes.draw do
   
   
   root :to => "events#index"
-  
+  get "homepage" => "homepage#hi"
  
   devise_for :consumers, :controllers => { :omniauth_callbacks => "consumers/omniauth_callbacks" }
 

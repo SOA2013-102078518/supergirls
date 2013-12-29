@@ -27,13 +27,20 @@ class EventsController < ApplicationController
 
     redirect_to :action => :show, :id => @event
   end
+  def giveup
+  redirect_to :action => :index
+  end
   def destroy
   @event = Event.find(params[:id])
   @event.destroy
 
-  redirect_to :action => :event
+  redirect_to :action => :index
+  end
+  def hi
+  
   end
   
+
   before_filter :authenticate_consumer!
 
 end

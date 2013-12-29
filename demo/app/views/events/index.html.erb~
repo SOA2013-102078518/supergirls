@@ -5,6 +5,7 @@
 
 <div id="products">  
   <%= event.name %>
+  <%= item.price %>
 <br>
   <%= link_to( image_tag(event.pic.url(:medium)), :action => 'show', :id => "#{event.id}")%></br>
   <%= link_to 'Show', event_path(event.id), :method=>:put %>
@@ -12,5 +13,6 @@
   <%= link_to 'Delete', event_path(event.id), :method=> :delete %> 
 </div>
 <% end %>
-<%= link_to 'Add new item', :controller => 'events', :action => 'new' %>
 </ul>
+
+<%= link_to 'Add new item', :controller => 'events', :action => 'new' %>

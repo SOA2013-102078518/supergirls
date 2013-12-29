@@ -11,12 +11,10 @@
  *= require_self
  *= require_tree .
  */
-<<<<<<< HEAD
+
 table { border-collapse:collapse; width:100%; }
 
 th {background-color:purple; color: white ; height:60px; border: 1px solid black; font-size:120%} td {background-color: wheat ; border: 1px solid black; padding:15px}
-=======
-
 
 
 
@@ -388,7 +386,7 @@ ul.contact li a.icon-rss:before
 	#header-wrapper
 	{
 		overflow: hidden;
-		padding: 5em 0em 0em 0em;
+		padding: 2em 0em 0em 0em;
 		background: yellow url(images/overlay.png) repeat;
 	}
 
@@ -894,7 +892,7 @@ ul.contact li a.icon-rss:before
 
 #footer .title h2
 {
-	font-size: 2em;
+	font-size: 5em;
 	font-weight: 300;
 	color: #FFF;
 }
@@ -902,7 +900,7 @@ ul.contact li a.icon-rss:before
 #footer .title .byline
 {
 	display: block;
-	padding-top: 1em;
+	padding-top: 5em;
 	text-transform: uppercase;
 	font-size: 0.80em;
 	color: rgba(255,255,255,0.5);
@@ -926,7 +924,7 @@ ul.contact li a.icon-rss:before
 
 #footer .button
 {
-	margin-top: 2em;
+	margin-top: 5em;
 }
 
 .extra2
@@ -1413,7 +1411,6 @@ ul.contact li a.icon-rss:before
 		.icon-yelp:before                 { content: "\f328"; }
 		.icon-cloud-upload:before		  { content: "\f0ee"; }
 		.icon-cloud-download:before		  { content: "\f0ed"; }
-
 #products{ 
 	width: 300px; 
 	display: inline-block; 

@@ -1,9 +1,16 @@
 <div id="productfont">
-  <div id="event"> 
+  <div id="event">
+<br/>
 <p>
 <b>
 <%= @event.name %></b>
 </p>
+<br/>
+<p>
+  <%= image_tag @event.pic.url(:medium) %>
+  <br/>
+</p>
+<br/>
 <p>
   Category: 
   <% case @event.cate %>
@@ -18,10 +25,6 @@
 <p>
   <b>Price:</b>
   <%= @event.price %>
-</p>
-<p>
-  <%= image_tag @event.pic.url(:medium) %>
-  <br/>
 </p>
   </div>
 <p>

@@ -1023,7 +1023,7 @@ ul.contact li a.icon-rss:before
 
 #portfolio .title h2
 {
-	font-size: 1.2em;
+	font-size: 5em;
 }
 
 #portfolio h2
@@ -1411,6 +1411,8 @@ ul.contact li a.icon-rss:before
 		.icon-yelp:before                 { content: "\f328"; }
 		.icon-cloud-upload:before		  { content: "\f0ee"; }
 		.icon-cloud-download:before		  { content: "\f0ed"; }
+
+
 #products{ 
 	width: 300px; 
 	display: inline-block; 
@@ -1419,3 +1421,10 @@ ul.contact li a.icon-rss:before
 	*zoom: 1; 
 	height : 400px 
 }
+div#br {  
+    border-top-right-radius:60px ;
+    border-bottom-right-radius:20px ;
+width:400px;height:160px;
+    background:#2d2d2d;
+}
+

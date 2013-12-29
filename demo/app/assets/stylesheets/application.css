@@ -1411,6 +1411,8 @@ ul.contact li a.icon-rss:before
 		.icon-yelp:before                 { content: "\f328"; }
 		.icon-cloud-upload:before		  { content: "\f0ee"; }
 		.icon-cloud-download:before		  { content: "\f0ed"; }
+
+
 #products{ 
 	width: 300px; 
 	display: inline-block; 
@@ -1419,3 +1421,5 @@ ul.contact li a.icon-rss:before
 	*zoom: 1; 
 	height : 400px 
 }
+
+

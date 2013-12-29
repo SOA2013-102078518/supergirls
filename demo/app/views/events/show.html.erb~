@@ -1,9 +1,15 @@
 <div id="productfont">
-<div id="event"> 
+  <div id="event">
 <p>
-  <b>
-  <%= @event.name %></b>
+<b>
+<%= @event.name %></b>
 </p>
+<br/>
+<p>
+  <%= image_tag @event.pic.url(:medium) %>
+  <br/>
+</p>
+<br/>
 <p>
   Category: 
   <% case @event.cate %>
@@ -19,12 +25,7 @@
   <b>Price:</b>
   <%= @event.price %>
 </p>
-<p>
-  <%= image_tag @event.pic.url(:medium) %>
-  <br/>
-</p>
-</div>
-</div>
+  </div>
 <p>
   <b>Description:</b>
   <%= @event.description %>
@@ -35,3 +36,4 @@
 <div class="fb-comments" data-width="600" data-numposts="5" data-colorscheme="light"></div>
 </p>
 <p><%= link_to 'Back to Index', :controller => 'events', :action => '' %></p>
+</div>

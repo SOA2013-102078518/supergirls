@@ -3,8 +3,9 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all
-    
+    @events = Event.search(params[:search])  
   end
+
   def new
     @event = Event.new
   end
@@ -34,16 +35,9 @@ class EventsController < ApplicationController
   @event = Event.find(params[:id])
   @event.destroy
   redirect_to :action => :index
-  end
-  
-  def search
-  @events = event.paginate :page => params[:page],  :conditions => ['txt like ?', "%#{params[:search]}%"]
-  end
-  #def hi
-  
-  #end
-  
-
+  end 
   before_filter :authenticate_consumer!
 
 end
+
+

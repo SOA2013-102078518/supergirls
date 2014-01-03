@@ -1,0 +1,13 @@
+class Item < ActiveRecord::Base
+  attr_accessible :description, :discussion, :image, :name, :price
+end
+
+#search bar
+def self.search(search)
+  if search
+    find(:all, :conditions => [name LIKE ?, "%#{search}%"])
+  else
+    find(:all)
+  end
+end
+

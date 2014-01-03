@@ -1,12 +1,19 @@
 
 <h1>Welcome to Supergirls' closet</h1>
 
+<%= form_tag items_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
 <table>
  {
         margin:0 auto;
         text-align: center;
         width: 928px; /* total computed width */
-        zoom: 1;
+        zoom: 5;
     }
 
 
@@ -17,7 +24,6 @@
     <th></th>
     <th></th>
   </tr>
-
 <% @items.each do |item| %>
   <tr>
     <td><%= item.name %></td>
@@ -39,6 +45,7 @@
 </body>
 
 <%= link_to 'New Item', new_item_path %>
+
 
 
 

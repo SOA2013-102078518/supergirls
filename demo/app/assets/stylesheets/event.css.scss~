@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #event{
-    float: right;
+    float: left;
     width: 550px;
     high: 350px;
     background: Black;

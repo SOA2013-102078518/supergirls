@@ -1,10 +1,19 @@
 <br>
 <p>product list<p>
+<br>
+<br>
+<%= form_tag events_path, :method => 'get' do %>  
+  <p>  
+    <%= text_field_tag :search, params[:search] %>  
+    <%= submit_tag "Search", :name => nil %>
+</p>
+<% end %>
 <ul>
 <% @events.each do |event| %>
-
-<div id="products">  
+<div id="products">
+<br>
   <%= event.name %>
+<br>
 <br>
   <%= link_to( image_tag(event.pic.url(:medium)), :action => 'show', :id => "#{event.id}")%></br>
   <%= link_to 'Show', event_path(event.id), :method=>:put %>

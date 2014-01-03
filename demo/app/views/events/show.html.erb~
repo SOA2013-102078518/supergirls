@@ -1,5 +1,8 @@
+<body>
+<h3 fontsize= 8>
 <div id="productfont">
   <div id="event">
+<br/>
 <p>
 <b>
 <%= @event.name %></b>
@@ -37,3 +40,5 @@
 </p>
 <p><%= link_to 'Back to Index', :controller => 'events', :action => '' %></p>
 </div>
+</h3>
+</body>

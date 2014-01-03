@@ -1419,12 +1419,17 @@ ul.contact li a.icon-rss:before
 	vertical-align: top; 
 	*display: inline; 
 	*zoom: 1; 
-	height : 400px 
+	height : 400px	
 }
-div#br {  
-    border-top-right-radius:60px ;
-    border-bottom-right-radius:20px ;
-width:400px;height:160px;
-    background:#2d2d2d;
-}
+
+#products background{
+	background: Black;
+        border-radius:20px;
+	width: 500px; 
+	display: inline-block; 
+	vertical-align: top; 
+	*display: inline; 
+	*zoom: 1; 
+	height : 700px}	
+	
 

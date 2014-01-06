@@ -24,10 +24,10 @@
 		<div id="menu">
 			<ul>
 				<li class="current_page_item"><a href="#" accesskey="1" title="">Homepage</a></li>
-				<li><a href="#" accesskey="2" title="">User Management</a></li>
+                                <li><%= link_to 'User Management', :controller => "usermanagement",:action => 'userprofile' %></li>
 				<li><a href="#" accesskey="3" title="">Catergroy</a></li>
-				<li><a href="#" accesskey="4" title="">About Us</a></li>
-				<li><a href="#" accesskey="5" title="">Contact Us</a></li>
+				<li><%= link_to 'About us', :controller => "aboutus",:action => 'introduce' %></li>
+				<li><%= link_to 'Contact us', :controller => "contactus",:action => 'contactinfo' %></li>
                                 
 <% if current_consumer %>
     <%= link_to('lOG OUT', destroy_consumer_session_path, :method => :delete) %> |

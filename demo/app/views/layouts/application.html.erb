@@ -13,7 +13,7 @@
 
 	<div id="header" class="container">
 		<div id="logo">
-			<span><%= image_tag("supergirl_homepage.jpg") %></span>
+			<span><%= image_tag("supergirl_homepage.png") %></span>
 			<h1>SUPERGIRL'S CLOSET</h1>
 			 </div>
 		</div>
@@ -23,7 +23,7 @@
 <div id="menu-wrapper">
 		<div id="menu">
 			<ul>
-				<li class="current_page_item"><a href="#" accesskey="1" title="">Homepage</a></li>
+				<li><%= link_to 'Homepage', :controller => 'events', :action => 'index' %></a></li>
                                 <li><%= link_to 'User Management', :controller => "usermanagement",:action => 'userprofile' %></li>
 				<li><a href="#" accesskey="3" title="">Catergroy</a></li>
 				<li><%= link_to 'About us', :controller => "aboutus",:action => 'introduce' %></li>

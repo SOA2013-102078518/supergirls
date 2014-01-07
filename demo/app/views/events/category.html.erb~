@@ -1,0 +1,30 @@
+<br>
+<br>
+<br>
+<FONT SIZE=5>
+<h1>Product list</h1>
+<ul>
+<br>
+<br>
+<FONT SIZE=3>
+<a href="/events/category/1">Clothes</a>
+<FONT SIZE=3>&nbsp;&nbsp;
+<a href="/events/category/2">Cosmetics</a>
+<FONT SIZE=3>&nbsp;&nbsp;
+<a href="/events/category/3">Smallitems</a>
+<br>
+<br>
+<% @event.each do |event| %>
+<%= event.name %>
+<div id="product"> 
+<br>
+<%= link_to( image_tag(event.pic.url(:medium)), :action => 'show', :id => "#{event.id}")%></br>
+ 
+  
+<br>
+
+</div>
+<% end %>
+
+
+

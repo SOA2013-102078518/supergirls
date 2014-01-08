@@ -23,7 +23,7 @@ class EventsController < ApplicationController
     redirect_to :action => :index
   end
   def show
-    @event = Event.find(params[:id])
+    @event = Event.includes(:consumer).find(params[:id])
     @page_title = @event.name
     
   end

@@ -4,10 +4,11 @@ class Consumer < ActiveRecord::Base
   
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :provider, :uid, :name
   # attr_accessible :title, :body
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
-  attr_accessible :provider, :uid, :name
+  
+  has_many :events  
 
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
   consumer = Consumer.where(:provider => auth.provider, :uid => auth.uid).first

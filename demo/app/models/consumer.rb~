@@ -4,10 +4,11 @@ class Consumer < ActiveRecord::Base
   
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessor :email, :password, :password_confirmation, :remember_me, :provider, :uid, :name
   # attr_accessible :title, :body
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
-  attr_accessible :provider, :uid, :name
+  
+  has_many :events  
 
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
   consumer = Consumer.where(:provider => auth.provider, :uid => auth.uid).first
@@ -16,14 +17,14 @@ class Consumer < ActiveRecord::Base
                          provider:auth.provider,
                          uid:auth.uid,
                          email:auth.info.email,
-                         password:Consumer.friendly_token[0,20]
+                         password:Devise.friendly_token[0,20]
                          )
   end
   consumer
  end
  def self.new_with_session(params, session)
     super.tap do |consumer|
-      if data = session["consumer.facebook_data"] && session["consumer.facebook_data"]["extra"]["raw_info"]
+      if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
         consumer.email = data["email"] if consumer.email.blank?
       end
     end

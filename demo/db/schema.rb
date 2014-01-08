@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20131222150638) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.integer  "event_id"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.string   "provider"
@@ -41,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20131222150638) do
     t.text     "description"
     t.text     "discussion"
     t.integer  "cate"
+    t.integer  "consumer_id"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
     t.string   "pic_file_name"

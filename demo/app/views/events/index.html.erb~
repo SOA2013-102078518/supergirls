@@ -1,6 +1,6 @@
 <br>
-<p>product list<p>
-<br>
+
+<p><FONT SIZE=5><%='Product list' %></p>
 <br>
 <%= form_tag events_path, :method => 'get' do %>  
   <p>  
@@ -21,6 +21,5 @@
   <%= link_to 'Delete', event_path(event.id), :method=> :delete %> 
 </div>
 <% end %>
-</ul>
-
-<%= link_to 'Add new item', :controller => 'events', :action => 'new' %>
+<br>
+<FONT SIZE=3><%= link_to 'Add new item', :controller => 'events', :action => 'new' %>

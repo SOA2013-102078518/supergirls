@@ -9,7 +9,7 @@ Demo::Application.routes.draw do
   devise_for :consumers, :controllers => { :omniauth_callbacks => "consumers/omniauth_callbacks" }
 
   resources :events
-
+  get "events/category/:page" => "events#category"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

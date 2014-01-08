@@ -4,6 +4,14 @@ class EventsController < ApplicationController
   def index
     @events = Event.all
     @events = Event.search(params[:search])  
+    #page = params[:page]
+    #if  page == '1'
+    #@event = Event.where("cate='1'") 
+    #elsif page == '2'
+    #@event = Event.where("cate='2'") 
+    #elsif page == '3'
+    #@event = Event.where("cate='3'") 
+    #end
   end
 
   def new
@@ -37,6 +45,18 @@ class EventsController < ApplicationController
   redirect_to :action => :index
   end 
   before_filter :authenticate_consumer!
+  def category
+    @event = Event.all
+    if  params[:page] == '1'
+    @event = Event.where("cate='1'") 
+    elsif params[:page] == '2'
+    @event = Event.where("cate='2'") 
+    elsif params[:page] == '3'
+    @event = Event.where("cate='3'") 
+    elsif params[:page] == '0'
+    @event = Event.all
+  end
+  end
 
 end
 

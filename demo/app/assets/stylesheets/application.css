@@ -1421,5 +1421,7 @@ ul.contact li a.icon-rss:before
 	*zoom: 1; 
 	height : 400px	
 }
-	
+
+#editblock {align: center; display: block; width: 500px; height : 400px; background: lightgreen ; border-style:dotted ; border-width:medium
+}	
 

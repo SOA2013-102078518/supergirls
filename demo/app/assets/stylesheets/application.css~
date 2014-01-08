@@ -1421,15 +1421,5 @@ ul.contact li a.icon-rss:before
 	*zoom: 1; 
 	height : 400px	
 }
-
-#products background{
-	background: Black;
-        border-radius:20px;
-	width: 500px; 
-	display: inline-block; 
-	vertical-align: top; 
-	*display: inline; 
-	*zoom: 1; 
-	height : 700px}	
 	
 

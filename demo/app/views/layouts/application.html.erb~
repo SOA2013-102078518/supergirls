@@ -14,7 +14,7 @@
 	<div id="header" class="container">
 		<div id="logo">
 			<span><%= image_tag("supergirl_homepage.png") %></span>
-			<h1>SUPERGIRL'S CLOSET<BLINK></h1>
+			<h1>SUPERGIRL'S CLOSET</h1>
 			 </div>
 		</div>
 		<div id="triangle-up"></div>
@@ -25,13 +25,13 @@
 			<ul>
 				<li><%= link_to 'Homepage', :controller => 'events', :action => 'index' %></a></li>
                                 <li><%= link_to 'User Management', :controller => "usermanagement",:action => 'userprofile' %></li>
-				<li><%= link_to 'Categoryies', '/events/category/0', :method=>:get  %></li>
+				<li><%= link_to 'Category', '/events/category/0', :method=>:get  %></li>
 				<li><%= link_to 'About us', :controller => "aboutus",:action => 'introduce' %></li>
 				<li><%= link_to 'Contact us', :controller => "contactus",:action => 'contactinfo' %></li>
                                 
 <% if current_consumer %>
-    <%= link_to('lOG OUT', destroy_consumer_session_path, :method => :delete) %> |
-    <%= link_to('change pwd', edit_registration_path(:consumer)) %>
+    <%= link_to('LOG OUT', destroy_consumer_session_path, :method => :delete) %> |
+    <%= link_to('CHANGE PWD', edit_registration_path(:consumer)) %>
   <% else %>
     <%= link_to('REGISTER', new_registration_path(:consumer)) %> |
     <%= link_to('LOG IN', new_session_path(:consumer)) %>

@@ -25,6 +25,7 @@
     <%= f.label :description, "Description" %>
     <br>
     <%= f.text_area :description %>
+    <%= f.hidden_field :consumer_id, :value=>current_consumer.id %>
     <br>
     <br>
     <%= f.submit "Create" %>

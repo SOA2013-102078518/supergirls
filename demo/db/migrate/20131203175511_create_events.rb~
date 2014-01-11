@@ -7,6 +7,7 @@ class CreateEvents < ActiveRecord::Migration
       t.text :description
       t.text :discussion
       t.integer :cate
+      t.references :consumer
       t.timestamps
     end
   end

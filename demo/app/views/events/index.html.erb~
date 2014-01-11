@@ -1,22 +1,49 @@
 <br>
-
-<p><FONT SIZE=5><%='Product list' %></p>
 <br>
-<%= form_tag events_path, :method => 'get' do %>  
+<div id=searchbar>         
+<br>
+<%= form_tag events_path, :method => 'get' do %>
   <p>  
-    <%= text_field_tag :search, params[:search] %>  
+    <%= text_field_tag :search, params[:search] %> 
     <%= submit_tag "Search", :name => nil %>
 </p>
+<br>
 <% end %>
+
+</div>
+<div id="categorylist">
+<br>
+<FONT SIZE=2>
+<h2>CATEGORIES</h2>
+<br>
+<FONT SIZE=3>
+<a href="/events/category/1">Clothes</a>
+<FONT SIZE=3>&nbsp;&nbsp;
+<a href="/events/category/2">Cosmetics</a>
+<FONT SIZE=3>&nbsp;&nbsp;
+<a href="/events/category/3">Smallitems</a>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
 <ul>
 <% @events.each do |event| %>
 <div id="products">
 <br>
-  <%= event.name %>
 <br>
 <br>
-  <%= link_to( image_tag(event.pic.url(:medium)), :action => 'show', :id => "#{event.id}")%></br>
-  <%= link_to 'Show', event_path(event.id), :method=>:put %>
+  <%= link_to( image_tag(event.pic.url(:medium)), :action => 'show', :id => "#{event.id}")%>
+<FONT SIZE=3>
+<br>
+ <%= event.name %>
+<br>
+ <%= event.price %>
+<br>
+<br>
+  <%= link_to 'Details', event_path(event.id), :method=>:put %>
   <%= link_to 'Edit', :controller => 'events', :action => 'edit', :id => event %>
   <%= link_to 'Delete', event_path(event.id), :method=> :delete %> 
 </div>

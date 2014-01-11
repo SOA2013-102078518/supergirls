@@ -1,10 +1,19 @@
 <br>
 <br>
+<div id="searchbar">
 <br>
-<FONT SIZE=5>
-<h1>Product list</h1>
-<ul>
+<%= form_tag events_path, :method => 'get' do %>  
+  <p>  
+    <%= text_field_tag :search, params[:search] %>  
+    <%= submit_tag "Search", :name => nil %>
+</p>
+<% end %>
+</div>
 <br>
+<div id="categorylist">
+<br>
+<FONT SIZE=2>
+<h2>CATEGORIES</h2>
 <br>
 <FONT SIZE=3>
 <a href="/events/category/1">Clothes</a>
@@ -14,17 +23,23 @@
 <a href="/events/category/3">Smallitems</a>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+</div>
+<br>
+<br>
 <% @event.each do |event| %>
+<div id="products">
 <%= event.name %>
-<div id="product"> 
 <br>
-<%= link_to( image_tag(event.pic.url(:medium)), :action => 'show', :id => "#{event.id}")%></br>
- 
-  
-<br>
-
+<%= link_to( image_tag(event.pic.url(:medium)), :action => 'show', :id => "#{event.id}")%></br> 
+<br> 
 </div>
 <% end %>
+
+
 
 
 

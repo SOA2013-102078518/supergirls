@@ -2,12 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #event{
-    float: left;
-    width: 550px;
-    high: 350px;
-    background: Black;
-    border-radius:20px;
+    float: top-left;
+    margin-left: 180px;
+    margin-right: 800px;
+    background: #363636;
 }
+
+#description{
+    position: absolute;
+    top: 570px;
+    left: 600px;
+    overflow: auto;	
+}	
+
 #productfont{
 	color: #FF6A6A;
 	font-weight: 700;

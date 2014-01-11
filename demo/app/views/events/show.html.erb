@@ -1,5 +1,24 @@
-<div id="productfont">
-  <div id="event">
+<br>
+<div id="categorylist">
+<FONT SIZE=2>
+<h2>CATEGORIES</h2>
+<br>
+<FONT SIZE=3>
+<a href="/events/category/1">Clothes</a>
+<FONT SIZE=3>&nbsp;&nbsp;
+<a href="/events/category/2">Cosmetics</a>
+<FONT SIZE=3>&nbsp;&nbsp;
+<a href="/events/category/3">Smallitems</a>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+
+
+<div id="event">
 <br/>
 <p>
 <b>
@@ -26,11 +45,13 @@
   <b>Price:</b>
   <%= @event.price %>
 </p>
-  </div>
+</div>
+
+<div id="description">
 <p>
   <b>Description:</b>
   <%= @event.description %>
-</p>
+</p>	
 <p>
   <b>Discussion:</b>
   <%= @event.discussion %>
@@ -38,3 +59,6 @@
 </p>
 <p><%= link_to 'Back to Index', :controller => 'events', :action => '' %></p>
 </div>
+
+
+

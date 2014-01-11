@@ -1,26 +1,34 @@
 <%= form_for @event, :url => { :controller => 'events', :action => 'create' } do |f| %>
 <br>
-
-
-
-
-    <%= f.label :name, "Name" %>
+<div id="itemeditbackground">
+<br>
+  <div id="itemedit">
+  <h4 align=left>
+    <%= f.label :name, "Procuct Name" %>
     <%= f.text_field :name, size: "25x10" %>
     <br>
-    Category: 
     <br>
+    <%= f.label :Cate, "Categories" %>
     <%= f.select :cate, [['clothes','1'],['cosmetics','2'],['small items','3']] %>
+    <br>
     <br>
     <%= f.label :price, "Price" %>
     <%= f.text_field :price, size: "25x10" %>
     <br>
+    <br>
     
-    <b> Picture </b><br/>
+    <%= f.label :pic, "Product Pic." %>
     <%= f.file_field :pic, size: "10x10" %>
-    </p>
+    <br>
+    <br>
     <%= f.label :description, "Description" %>
+    <br>
     <%= f.text_area :description %>
+    <br>
     <br>
     <%= f.submit "Create" %>
     <%= f.submit "Giveup" %>
 <% end %>
+  </h4>
+  </div>
+</div>

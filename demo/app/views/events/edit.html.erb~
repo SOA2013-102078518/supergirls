@@ -1,17 +1,33 @@
 <%= form_for @event, :url => { :controller => 'events', :action => 'update', :id => @event } do |f| %>
-    <%= f.label :name, "Name" %>
-    <%= f.text_field :name %>
+    <br>
+    <br>
+    <br>
+<div id="itemeditbackground">
+<br>
+<br>
+  <div id="itemedit">
+  <h4 align=left>
+    <%= f.label :name, "Procuct Name" %>
+    <%= f.text_field :name, size: "25x10" %>
+    <br>
     <br>
     <%= f.label :price, "Price" %>
-    <%= f.text_field :price %>
+    <%= f.text_field :price, size: "25x10" %>
     <br>
-    <b> Picture </b><br/>
+    <br>
+    
+    <%= f.label :pic, "Product Pic." %>
     <%= f.file_field :pic, size: "10x10" %>
     <br>
-    <%= f.label :description, "Description" %>
-    <%= f.text_area :description, size: "45x10" %>
     <br>
-    <%= f.submit "Update" %>
+    <%= f.label :description, "Description" %>
+    <br>
+    <%= f.text_area :description %>
+    <br>
+    <br>
+    <%= f.submit "Create" %>
     <%= f.submit "Giveup" %>
 <% end %>
-
+  </h4>
+  </div>
+</div>

@@ -3,6 +3,7 @@
 <%=current_consumer.email %>
 <br>
 <br>
+<div id="event">
 <%='Your upload product list:' %>
 <br>
 <%@event.each do |event| %> 
@@ -20,8 +21,10 @@
 <br>
 
 <%end%>
+</div>
 
-<%= 'Your FAVORITE list' %>
+<div id="event">
+<%= 'Your Favorite List' %>
 <% @favorite.each do |event| %> 
 <br>
 <%if%>
@@ -33,10 +36,11 @@
 <% end %>
 </br>
 <% end %>
+</div>
 
 
-<div>
-<%= 'Your shopping list' %>
+<div id="event">
+<%= 'Your Shopping List' %>
 <% @buy.each do |event| %> 
 <br>
 <br>

@@ -3,7 +3,7 @@
 
 <br>
 <br>
-<align=right> <span><%= image_tag("intro.gif") %></span>
+<align=center> <span><%= image_tag("intro.gif") %></span>
 <p>Contact Supergirls --- kk03232003@gmail.com</p>
 
 

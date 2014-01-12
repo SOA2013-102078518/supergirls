@@ -1406,17 +1406,16 @@ ul.contact li a.icon-rss:before
 		.icon-cloud-upload:before		  { content: "\f0ee"; }
 		.icon-cloud-download:before		  { content: "\f0ed"; }
 
-#products{ 
-display: inline-block;
+
 #products{ 
 width: 300px;
 display: inline-block;
 vertical-align: top;
 *zoom: 1;
-height : 350px;
-border:solid black;
+height : 370px;
+border:solid white;
 text-align: center;	
-}	
+	
 }
 
 #editblock {align: center; display: block; width: 500px; height : 400px;   border-width:medium ;  border:1px solid black;
@@ -1452,3 +1451,54 @@ text-align: center;
     background: #363636;
 }
 
+
+
+#event{
+width: 300px;
+display: inline-block;
+vertical-align: top;
+*zoom: 1;
+height : 370px;
+border:solid white;
+text-align: center;	
+}
+
+#hi{
+width: 300px;
+background-color:#ffffff;
+vertical-align: top;
+*zoom: 1;
+height : 370px;
+border:solid white;
+text-align: center;	
+}
+
+description
+
+{
+
+text-align: left;
+
+position:relative;
+
+padding:30px;
+
+margin-bottom:10px;
+
+width: 940px;
+
+border-radius: 10px;
+
+box-shadow:3px 3px 10px #666;
+
+display: inline-block;
+
+vertical-align: top;
+
+left:170px;
+
+color:#949494;
+
+font-weight:bold;
+
+font-size:16px;}

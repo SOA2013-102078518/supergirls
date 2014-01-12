@@ -17,20 +17,15 @@
 <FONT SIZE=3>&nbsp;&nbsp;
 <br>
 <a href="/events/category/5">other</a>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 </div>
 
 
-<div id="event">
-<br>
+<div id="hi">
+
 <p>
 <b>
-<br>
+
 <%= @event.name %></b>
 
 
@@ -38,7 +33,7 @@
 <br/>
 <p>
   <%= image_tag @event.pic.url(:medium) %>
-  <br/>
+
 </p>
 <br/>
 <p>
@@ -63,9 +58,7 @@
 </div>
 
 <div id="description">
-  <div id="descriptionindex">
 <h4 align=left>
-<br>
 <p>
   <b>Description:</b>
   <%= @event.description %>
@@ -74,18 +67,20 @@
 <%= button_to 'Add to My Favorite', :controller => 'events', :action => 'favorite',:id =>@event.id %>
 </p>  
 </h4>
-  </div>
+ 
 <br>
 <br>
 </div>	
 <p>
+
+
 <div id="discussion">
-<h4 align=left>
+<h4 align=center>
   <b>Discussion:</b>
 <br>
 <br>
   <%= @event.discussion %>
-<div class="fb-comments" data-width="600" data-numposts="5" data-colorscheme="light"></div>
+<div class="fb-comments" data-width="1000" data-numposts="5" data-colorscheme="light"></div>
 </p>
 </h4>
 </div>

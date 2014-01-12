@@ -1408,15 +1408,14 @@ ul.contact li a.icon-rss:before
 
 
 #products{ 
-	#products{ 
-	width: 300px;
+width: 300px;
 display: inline-block;
 vertical-align: top;
 *zoom: 1;
-height : 350px;
-border:solid black;
+height : 370px;
+border:solid white;
 text-align: center;	
-}	
+	
 }
 
 #editblock {align: center; display: block; width: 500px; height : 400px;   border-width:medium ;  border:1px solid black;
@@ -1451,4 +1450,27 @@ text-align: center;
     height : 650px;
     background: #363636;
 }
+
+
+
+#event{
+width: 300px;
+display: inline-block;
+vertical-align: top;
+*zoom: 1;
+height : 370px;
+border:solid white;
+text-align: center;	
+}
+
+#hi{
+width: 300px;
+background-color:#ffffff;
+vertical-align: top;
+*zoom: 1;
+height : 370px;
+border:solid white;
+text-align: center;	
+}
+
 

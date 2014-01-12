@@ -18,8 +18,9 @@
 <br>
 <br>
 <div>
+<%end%>
 <%= 'Your shopping list' %>
-
+<%@buy.each do |event| %> 
 <br>
 <br>
 <%if%>

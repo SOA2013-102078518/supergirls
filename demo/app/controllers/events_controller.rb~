@@ -80,6 +80,7 @@ class EventsController < ApplicationController
   end
   
   def favorite
+
   @event = Event.find(params[:id])
   @event.update_attributes(:favorite_id=>current_consumer.id)
   flash[:notice] = "Add to Your Favorite List"

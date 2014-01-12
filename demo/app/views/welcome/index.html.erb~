@@ -1,3 +1,0 @@
-<p>Hello, Amber</p>
-<p><%= link_to 'choose to sell', welcome_say_hello_path %></p>
-<p><%= link_to 'choose to buy', items_index_path %></p>

@@ -10,11 +10,20 @@
 
 #description{
     position: absolute;
-    top: 570px;
+    top: 175px;
     left: 600px;
-    overflow: auto;	
+    width: 600px;
+    height: 470px;
+    border:gray 1px groove;	 
+}		
+
+#descriptionindex{
+    width: 550px; 
 }	
 
+#discussion{
+    left: 180px;
+}
 #productfont{
 	color: #FF6A6A;
 	font-weight: 700;

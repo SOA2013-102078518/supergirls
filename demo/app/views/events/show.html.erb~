@@ -79,14 +79,12 @@
 </div>	
 <p>
 <div id="discussion">
-<h4 align=left>
   <b>Discussion:</b>
 <br>
 <br>
   <%= @event.discussion %>
 <div class="fb-comments" data-width="600" data-numposts="5" data-colorscheme="light"></div>
 </p>
-</h4>
 </div>
 <p><%= link_to 'Back to Index', :controller => 'events', :action => '' %></p>
 

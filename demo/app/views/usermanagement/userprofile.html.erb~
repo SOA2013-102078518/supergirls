@@ -16,11 +16,28 @@
 <%= link_to 'Edit', :controller => 'events', :action => 'edit', :id => event %>
 <%= link_to 'Delete', event_path(event.id), :method=> :delete %> 
 <br>
+
 <br>
-<div>
+
 <%end%>
+
+<%= 'Your FAVORITE list' %>
+<% @favorite.each do |event| %> 
+<br>
+<%if%>
+<% event.favorite_id == current_consumer.id %>
+<%=event.name %>
+<br>
+<%= image_tag event.pic.url(:medium) %>
+<%= link_to 'Show', event_path(event.id), :method=>:put %>
+<% end %>
+</br>
+<% end %>
+
+
+<div>
 <%= 'Your shopping list' %>
-<%@buy.each do |event| %> 
+<% @buy.each do |event| %> 
 <br>
 <br>
 <%if%>
@@ -29,9 +46,9 @@
 <br>
 <%= image_tag event.pic.url(:medium) %>
 <%end%>
+
 </div>
+
+
 </b>
 <%end%>
-
-
-

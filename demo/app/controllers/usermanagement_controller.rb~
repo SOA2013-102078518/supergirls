@@ -4,7 +4,5 @@ class UsermanagementController < ApplicationController
    @event = Event.includes(:consumer).where( :consumer_id => current_consumer.id)
 
    @buy = Event.includes(:consumer).where( :buy_id => current_consumer.id)
-   @favorite = Event.includes(:consumer).where( :favorite_id => current_consumer.id)
    end
-   
 end

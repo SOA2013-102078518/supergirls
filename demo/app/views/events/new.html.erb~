@@ -2,7 +2,6 @@
 <br>
 <div id="itemeditbackground">
 <br>
-<br>
   <div id="itemedit">
   <h4 align=left>
     <%= f.label :name, "Procuct Name" %>
@@ -10,7 +9,7 @@
     <br>
     <br>
     <%= f.label :Cate, "Categories" %>
-    <%= f.select :cate, [['clothes','1'],['cosmetics','2'],['small items','3']] %>
+    <%= f.select :cate, [['clothes','1'],['cosmetics','2'],['stationery','3'],['furniture','4'],['other','5']] %>
     <br>
     <br>
     <%= f.label :price, "Price" %>

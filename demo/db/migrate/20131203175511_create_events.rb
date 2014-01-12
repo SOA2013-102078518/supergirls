@@ -8,6 +8,8 @@ class CreateEvents < ActiveRecord::Migration
       t.text :discussion
       t.integer :cate
       t.references :consumer
+      t.integer :event_id
+      t.integer :buy_id
       t.timestamps
     end
   end

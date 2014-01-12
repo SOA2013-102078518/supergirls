@@ -1,15 +1,13 @@
 <%= form_for @event, :url => { :controller => 'events', :action => 'update', :id => @event } do |f| %>
     <br>
-    <br>
-    <br>
 <div id="itemeditbackground">
-<br>
 <br>
   <div id="itemedit">
   <h4 align=left>
     <%= f.label :name, "Procuct Name" %>
     <%= f.text_field :name, size: "25x10" %>
     <br>
+    <%= f.select :cate, [['clothes','1'],['cosmetics','2'],['stationery','3'],['furniture','4'],['other','5']] %>
     <br>
     <%= f.label :price, "Price" %>
     <%= f.text_field :price, size: "25x10" %>

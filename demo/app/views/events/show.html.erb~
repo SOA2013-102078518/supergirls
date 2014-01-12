@@ -8,7 +8,12 @@
 <FONT SIZE=3>&nbsp;&nbsp;
 <a href="/events/category/2">Cosmetics</a>
 <FONT SIZE=3>&nbsp;&nbsp;
-<a href="/events/category/3">Smallitems</a>
+<a href="/events/category/3">stationery</a>
+<FONT SIZE=3>&nbsp;&nbsp;
+<a href="/events/category/4">furniture</a>
+<FONT SIZE=3>&nbsp;&nbsp;
+<br>
+<a href="/events/category/5">other</a>
 <br>
 <br>
 <br>
@@ -42,14 +47,19 @@
   <% when 2 %>
   <%= "cosmetics" %>
   <% when 3 %>
-  <%= "small items" %>
-  <% end %>
+  <%= "stationery" %>
+  <% when 4 %>
+  <%= "furniture" %>
+  <% when 5 %>
+  <%= "other" %>
 </p>
 <p>
   <b>Price:</b>
   <%= @event.price %>
 </p>
 </div>
+
+<div id="description">
 <p>
   <b>Description:</b>
   <%= @event.description %>
@@ -60,6 +70,8 @@
 <div class="fb-comments" data-width="600" data-numposts="5" data-colorscheme="light"></div>
 </p>
 <p><%= link_to 'Back to Index', :controller => 'events', :action => '' %></p>
+<%= button_to 'I want to Buy', :controller => 'events', :action => 'buy',:id =>@event.id %>
+</div>
 
 
 

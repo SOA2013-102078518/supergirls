@@ -1,6 +1,5 @@
 class UsermanagementController < ApplicationController
    def userprofile
-   @usermanagementcontroller = UsermanagementController.includes(:consumer).find(params[:id])
-   
+   @event = Event.includes(:consumer).where( :consumer_id => current_consumer.id)
    end
 end

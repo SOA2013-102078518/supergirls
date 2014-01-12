@@ -21,7 +21,12 @@
 <FONT SIZE=3>&nbsp;&nbsp;
 <a href="/events/category/2">Cosmetics</a>
 <FONT SIZE=3>&nbsp;&nbsp;
-<a href="/events/category/3">Smallitems</a>
+<a href="/events/category/3">stationery</a>
+<FONT SIZE=3>&nbsp;&nbsp;
+<a href="/events/category/4">furniture</a>
+<FONT SIZE=3>&nbsp;&nbsp;
+<br>
+<a href="/events/category/5">other</a>
 <br>
 <br>
 <br>
@@ -33,19 +38,38 @@
 <% @events.each do |event| %>
 <div id="products">
 <br>
+
+<% if event.buy_id == nil %>
 <br>
 <br>
   <%= link_to( image_tag(event.pic.url(:medium)), :action => 'show', :id => "#{event.id}")%>
 <FONT SIZE=3>
 <br>
- <%= event.name %>
+
+<%= link_to 'Show', event_path(event.id), :method=>:put %>
+<%= link_to 'Edit', :controller => 'events', :action => 'edit', :id => event %>
+<%= link_to 'Delete', event_path(event.id), :method=> :delete %>
+  <%= event.name %>
 <br>
- <%= event.price %>
+  <%='Price: NT'%>
+  <%= event.price %>
 <br>
 <br>
-  <%= link_to 'Details', event_path(event.id), :method=>:put %>
-  <%= link_to 'Edit', :controller => 'events', :action => 'edit', :id => event %>
-  <%= link_to 'Delete', event_path(event.id), :method=> :delete %> 
+  <% elsif %>
+<% if event.buy_id == current_consumer.id %>
+<br>
+<%= link_to( image_tag(event.pic.url(:medium)), :action => 'show', :id => "#{event.id}")%>
+<br>
+<%= 'You have buy it'%>
+
+<% else %>
+<br>
+<%= link_to( image_tag(event.pic.url(:medium)), :action => 'show', :id => "#{event.id}")%>
+<br>
+<%= 'Sorry, this item is booked' %>  
+<% end %>
+</div>
+<% end %>
 </div>
 <% end %>
 <br>

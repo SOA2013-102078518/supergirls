@@ -1,11 +1,14 @@
 <br>
 <br>
+<div id="searchbar">
+<br>
 <%= form_tag events_path, :method => 'get' do %>  
   <p>  
     <%= text_field_tag :search, params[:search] %>  
     <%= submit_tag "Search", :name => nil %>
 </p>
 <% end %>
+</div>
 <br>
 <div id="categorylist">
 <br>
@@ -13,11 +16,19 @@
 <h2>CATEGORIES</h2>
 <br>
 <FONT SIZE=3>
-<a href="/events/category/1">Clothes</a>
+<a href="/events/category/1">Coats</a>
 <FONT SIZE=3>&nbsp;&nbsp;
-<a href="/events/category/2">Cosmetics</a>
+<br>
+<a href="/events/category/2">Pants</a>
 <FONT SIZE=3>&nbsp;&nbsp;
-<a href="/events/category/3">Smallitems</a>
+<br>
+<a href="/events/category/3">Shoes</a>
+<FONT SIZE=3>&nbsp;&nbsp;
+<br>
+<a href="/events/category/4">Accessory</a>
+<FONT SIZE=3>&nbsp;&nbsp;
+<br>
+<a href="/events/category/5">other</a>
 <br>
 <br>
 <br>

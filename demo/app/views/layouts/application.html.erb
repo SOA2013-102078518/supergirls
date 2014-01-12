@@ -8,16 +8,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h2 align=right style="color: #FF6A6A">
+<h2 align=left style="color: #FF6A6A">
 <div id="header-wrapper">
 
 	<div id="header" class="container">
 		<div id="logo">
-			<span><%= image_tag("supergirl_homepage.png") %></span>
-			<h1>SUPERGIRL'S CLOSET</h1>
+			<span><%= image_tag("super.jpg") %></span>
+			
 			 </div>
 		</div>
-		<div id="triangle-up"></div>
+		
 	</div>
 </div>
 <div id="menu-wrapper">
@@ -30,18 +30,18 @@
 				<li><%= link_to 'Contact us', :controller => "contactus",:action => 'contactinfo' %></li>
                                 
 <% if current_consumer %>
-    <%= link_to('LOG OUT', destroy_consumer_session_path, :method => :delete) %> |
-    <%= link_to('CHANGE PWD', edit_registration_path(:consumer)) %>
+    <li><%= link_to('LOG OUT', destroy_consumer_session_path, :method => :delete) %> |
+    <%= link_to('CHANGE PWD', edit_registration_path(:consumer)) %> </li>
   <% else %>
-    <%= link_to('REGISTER', new_registration_path(:consumer)) %> |
-    <%= link_to('LOG IN', new_session_path(:consumer)) %>
+    <li><%= link_to('REGISTER', new_registration_path(:consumer)) %> |
+    <%= link_to('LOG IN', new_session_path(:consumer)) %> </li>
   <% end %>
 			</ul>
 		</div>
 </div>
 </h2>
 
-<body align=center style="background: #ffebcd;">
+<body align=center style="background: #ffffff;">
 <h3 align=center style="color: #FF6A6A">
 <%= yield %>
 <div id="fb-root"></div>

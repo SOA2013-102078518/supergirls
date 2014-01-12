@@ -1,6 +1,6 @@
 <b> Hello! </b>
 <b>
-<%=@event[0].consumer.name %>
+<%=@event[0].consumer.email %>
 <br>
 <br>
 <%='Your upload product list:' %>
@@ -15,8 +15,20 @@
 <%= link_to 'Detail', event_path(event.id), :method=>:put %>
 <%= link_to 'Edit', :controller => 'events', :action => 'edit', :id => event %>
 <%= link_to 'Delete', event_path(event.id), :method=> :delete %> 
+<br>
+<br>
+<div>
+<%= 'Your shopping list' %>
 
-
+<br>
+<br>
+<%if%>
+<% event.id == current_consumer.id %>
+<%=@event.name %>
+<br>
+<%= image_tag event.pic.url(:medium) %>
+<%end%>
+</div>
 </b>
 <%end%>
 

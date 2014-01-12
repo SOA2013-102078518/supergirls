@@ -387,20 +387,14 @@ ul.contact li a.icon-rss:before
 	{
 		overflow: hidden;
 		padding: 2em 0em 0em 0em;
-		background: yellow url(images/overlay.png) repeat;
+		background: white url(images/overlay.png) repeat;
 	}
 
 	#header
 	{
 	}
 
-#triangle-up {
-	margin: 0 auto;
-	width: 0;
-	height: 0;
-	border-left: 60px solid transparent;
-	border-right: 60px solid transparent;
-	border-bottom: 30px solid #3D3D3D;
+
 }
 
 /*********************************************************************************/
@@ -1422,8 +1416,14 @@ ul.contact li a.icon-rss:before
 	height : 400px	
 }
 
-#editblock {align: center; display: block; width: 500px; height : 400px; background: lightgreen ; border-style:dotted ; border-width:medium
+#editblock {align: center; display: block; width: 500px; height : 400px;   border-width:medium ;  border:1px solid black;
+  opacity:1 ;background-color:#fffacd
+}	
+
+
+#aboutus {align: center; display: block; width: 600px; height : 400px; background: #fffacd; border-style:dotted ; border-width:medium 
 }
+
 
 #categorylist{
     float: left;
@@ -1432,8 +1432,9 @@ ul.contact li a.icon-rss:before
 
 #searchbar{
     width: 600px; 
-    height : 50px; 
+    height : 60px; 
     background: #363636;
+     opacity:0.8;
     border-radius:10px;
 }	
 
@@ -1444,7 +1445,7 @@ ul.contact li a.icon-rss:before
 
 #itemeditbackground{
     width: 450px; 
-    height : 600px;
+    height : 650px;
     background: #363636;
 }
 

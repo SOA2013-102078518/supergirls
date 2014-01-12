@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(:version => 20131222150638) do
     t.integer  "consumer_id"
     t.integer  "event_id"
     t.integer  "buy_id"
+    t.integer  "favorite_id"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
     t.string   "pic_file_name"

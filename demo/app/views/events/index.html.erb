@@ -59,6 +59,7 @@
     <br>
     <%='Price: NT'%>
     <%= event.price %>
+    
     <br>
     <br>
     <% else %>
@@ -71,6 +72,7 @@
     <%= event.price %>
     <br>
     <%= 'Somebody want to buy this!'%>
+    <FONT SIZE=3><%= link_to 'Add new item', :controller => 'events', :action => 'new' %>
     <% end %>
   <% else %>
     <% if event.buy_id == nil %>
@@ -81,6 +83,7 @@
     <br>
     <%='Price: NT'%>
     <%= event.price %>
+    <FONT SIZE=3><%= link_to 'Add new item', :controller => 'events', :action => 'new' %>
     <br>
     <FONT SIZE=3>
     <% else %>
@@ -93,12 +96,14 @@
     <%= event.price %>
     <br>
     <%= 'Sorry, this item is booked' %>  
-    <% end %>
-    <% end %>
-    <br>
-    <br>
-    <br>
     <FONT SIZE=3><%= link_to 'Add new item', :controller => 'events', :action => 'new' %>
+    <% end %> <FONT SIZE=3>
+     
+    <% end %>
+    <br>
+    <br>
+    <br>
+
 <% else %>
     <div id="products">
     <%= event.name %>
@@ -117,6 +122,6 @@
 <br>
 <br>
 <br>
-
+<FONT SIZE=3><%= link_to 'Add new item', :controller => 'events', :action => 'new' %>  
 
 

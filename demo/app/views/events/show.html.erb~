@@ -27,9 +27,16 @@
 
 
 <div id="event">
+<<<<<<< HEAD
 <br>
 <p>
 <b>
+=======
+<br/>
+<p>
+<b>
+<%= @event.consumer.email %></b>
+>>>>>>> d72ea40022ee6fa52720e67f8493ab23ff4f140a
 <br>
 <%= @event.name %></b>
 
@@ -63,6 +70,7 @@
 </div>
 
 <div id="description">
+<<<<<<< HEAD
   <div id="descriptionindex">
 <h4 align=left>
 <br>
@@ -89,6 +97,21 @@
 <p><%= link_to 'Back to Index', :controller => 'events', :action => '' %></p>
 
 
+=======
+<p>
+  <b>Description:</b>
+  <%= @event.description %>
+</p>	
+<p>
+  <b>Discussion:</b>
+  <%= @event.discussion %>
+<div class="fb-comments" data-width="600" data-numposts="5" data-colorscheme="light"></div>
+</p>
+<p><%= link_to 'Back to Index', :controller => 'events', :action => '' %></p>
+<%= button_to 'I want to Buy', :controller => 'events', :action => 'buy',:id =>@event.id %>
+<%= button_to 'Add to My Favorite', :controller => 'events', :action => 'favorite',:id =>@event.id %>
+</div>
+>>>>>>> d72ea40022ee6fa52720e67f8493ab23ff4f140a
 
 
 

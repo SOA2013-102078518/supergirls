@@ -39,7 +39,7 @@
 </div>
 <ul>
 <% @events.each do |event| %>
-<div id="products">
+
 <br>
 <% if current_consumer %>
   <% if event.consumer.id==current_consumer.id %>
@@ -54,6 +54,7 @@
     <%= link_to 'Edit', :controller => 'events', :action => 'edit', :id => event %>
     <%= link_to 'Delete', event_path(event.id), :method=> :delete %>
     <br>
+    <div id="products">
     <%= event.name %>
     <br>
     <%='Price: NT'%>
@@ -63,20 +64,48 @@
     <% else %>
     <%= link_to( image_tag(event.pic.url(:medium)), :action => 'show', :id => "#{event.id}")%>
     <br>
+    <div id="products">
+    <%= event.name %>
+    <br>
+    <%='Price: NT'%>
+    <%= event.price %>
+    <br>
     <%= 'Somebody want to buy this!'%>
     <% end %>
   <% else %>
     <% if event.buy_id == nil %>
     <br>
     <%= link_to( image_tag(event.pic.url(:medium)), :action => 'show', :id => "#{event.id}")%>
+    <div id="products">
+    <%= event.name %>
+    <br>
+    <%='Price: NT'%>
+    <%= event.price %>
+    <br>
     <FONT SIZE=3>
     <% else %>
     <%= link_to( image_tag(event.pic.url(:medium)), :action => 'show', :id => "#{event.id}")%>
     <br>
+    <div id="products">
+    <%= event.name %>
+    <br>
+    <%='Price: NT'%>
+    <%= event.price %>
+    <br>
     <%= 'Sorry, this item is booked' %>  
     <% end %>
     <% end %>
+    <br>
+    <br>
+    <br>
+    <FONT SIZE=3><%= link_to 'Add new item', :controller => 'events', :action => 'new' %>
 <% else %>
+    <div id="products">
+    <%= event.name %>
+    <br>
+    <%='Price: NT'%>
+    <%= event.price %>
+    <br>
 <%= link_to( image_tag(event.pic.url(:medium)), :action => 'show', :id => "#{event.id}")%>
 <% end %>
 <br>
@@ -84,8 +113,10 @@
 </div>
 <%end%>
 <br>
+
 <br>
 <br>
-<FONT SIZE=3><%= link_to 'Add new item', :controller => 'events', :action => 'new' %>
+<br>
+
 
 

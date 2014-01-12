@@ -1413,7 +1413,9 @@ ul.contact li a.icon-rss:before
 	vertical-align: top; 
 	*display: inline; 
 	*zoom: 1; 
-	height : 400px	
+	height : 300px
+        border:solid blue;
+        text-align: center;	
 }
 
 #editblock {align: center; display: block; width: 500px; height : 400px;   border-width:medium ;  border:1px solid black;

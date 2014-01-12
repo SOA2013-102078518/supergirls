@@ -1,6 +1,6 @@
 <b> Hello! </b>
 <b>
-<%=@event[0].consumer.email %>
+<%=current_consumer.email %>
 <br>
 <br>
 <%='Your upload product list:' %>
@@ -18,13 +18,14 @@
 <br>
 <br>
 <div>
+<%end%>
 <%= 'Your shopping list' %>
-
+<%@buy.each do |event| %> 
 <br>
 <br>
 <%if%>
 <% event.id == current_consumer.id %>
-<%=@event.name %>
+<%=event.name %>
 <br>
 <%= image_tag event.pic.url(:medium) %>
 <%end%>

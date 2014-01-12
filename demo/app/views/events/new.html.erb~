@@ -9,7 +9,7 @@
     <br>
     <br>
     <%= f.label :Cate, "Categories" %>
-    <%= f.select :cate, [['clothes','1'],['cosmetics','2'],['stationery','3'],['furniture','4'],['other','5']] %>
+    <%= f.select :cate, [['Coats','1'],['Pants','2'],['Shoes','3'],['Accessory','4'],['other','5']] %>
     <br>
     <br>
     <%= f.label :price, "Price" %>
